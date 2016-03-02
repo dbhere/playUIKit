@@ -14,6 +14,8 @@
 		3504672A1C85E87900115A08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350467281C85E87900115A08 /* LaunchScreen.storyboard */; };
 		350467351C85E87900115A08 /* imagePlayGroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350467341C85E87900115A08 /* imagePlayGroundTests.swift */; };
 		350467401C85E87A00115A08 /* imagePlayGroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3504673F1C85E87A00115A08 /* imagePlayGroundUITests.swift */; };
+		356C8BFD1C86CCC70017B63B /* topTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356C8BFC1C86CCC70017B63B /* topTextFieldDelegate.swift */; };
+		356C8BFF1C86CDA40017B63B /* bottomTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356C8BFE1C86CDA40017B63B /* bottomTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		3504673B1C85E87900115A08 /* imagePlayGroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = imagePlayGroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3504673F1C85E87A00115A08 /* imagePlayGroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagePlayGroundUITests.swift; sourceTree = "<group>"; };
 		350467411C85E87A00115A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		356C8BFC1C86CCC70017B63B /* topTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = topTextFieldDelegate.swift; sourceTree = "<group>"; };
+		356C8BFE1C86CDA40017B63B /* bottomTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = bottomTextFieldDelegate.swift; path = imagePlayGround/bottomTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		350467131C85E87900115A08 = {
 			isa = PBXGroup;
 			children = (
+				356C8C021C86CF7C0017B63B /* delegate */,
 				3504671E1C85E87900115A08 /* imagePlayGround */,
 				350467331C85E87900115A08 /* imagePlayGroundTests */,
 				3504673E1C85E87A00115A08 /* imagePlayGroundUITests */,
@@ -123,6 +128,15 @@
 				350467411C85E87A00115A08 /* Info.plist */,
 			);
 			path = imagePlayGroundUITests;
+			sourceTree = "<group>";
+		};
+		356C8C021C86CF7C0017B63B /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				356C8BFE1C86CDA40017B63B /* bottomTextFieldDelegate.swift */,
+				356C8BFC1C86CCC70017B63B /* topTextFieldDelegate.swift */,
+			);
+			name = delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				350467221C85E87900115A08 /* ViewController.swift in Sources */,
+				356C8BFF1C86CDA40017B63B /* bottomTextFieldDelegate.swift in Sources */,
 				350467201C85E87900115A08 /* AppDelegate.swift in Sources */,
+				356C8BFD1C86CCC70017B63B /* topTextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +501,7 @@
 				350467461C85E87A00115A08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		350467471C85E87A00115A08 /* Build configuration list for PBXNativeTarget "imagePlayGroundTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +510,7 @@
 				350467491C85E87A00115A08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3504674A1C85E87A00115A08 /* Build configuration list for PBXNativeTarget "imagePlayGroundUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +519,7 @@
 				3504674C1C85E87A00115A08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

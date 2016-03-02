@@ -88,9 +88,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         // TODO:  Show toolbar and navbar
         
-        return memedImage    }
+        return memedImage
+    }
     
-
+    //创建meme对象
+    func save(){
+        let memeImage = generateMemedImage()
+        let meme = Meme(topText: topTextField.text, bottomText: bottomTextField.text, image: imagePickerView.image, memedImage: memeImage)
+    }
+    
     @IBAction func pickImage(sender: AnyObject) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self

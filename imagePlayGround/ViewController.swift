@@ -73,6 +73,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         view.frame.origin.y += getKeyboardHeight(notification)
     }
     
+    //创建Meme图像
+    func generateMemedImage() -> UIImage
+    {
+        // TODO: Hide toolbar and navbar
+        
+        // Render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawViewHierarchyInRect(self.view.frame,
+            afterScreenUpdates: true)
+        let memedImage : UIImage =
+        UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        // TODO:  Show toolbar and navbar
+        
+        return memedImage    }
+    
 
     @IBAction func pickImage(sender: AnyObject) {
         let imagePickerController = UIImagePickerController()

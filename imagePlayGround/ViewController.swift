@@ -72,7 +72,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func keyboardWillShow(notification: NSNotification) {
-        view.frame.origin.y -= getKeyboardHeight(notification)
+        if bottomTextField.isFirstResponder(){
+            view.frame.origin.y -= getKeyboardHeight(notification)
+        }
     }
     
     func getKeyboardHeight(notification: NSNotification) -> CGFloat {
@@ -82,7 +84,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     //当keyboard消失时，试图向下移动一个键盘的height
     func keyboardWillHide(notification: NSNotification){
-        view.frame.origin.y += getKeyboardHeight(notification)
+        if bottomTextField.isFirstResponder(){
+            view.frame.origin.y += getKeyboardHeight(notification)
+        }
     }
     
     //创建Meme图像

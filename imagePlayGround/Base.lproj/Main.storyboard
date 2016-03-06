@@ -32,7 +32,7 @@
                                             <action selector="pickImage:" destination="BYZ-38-t0r" id="z41-qH-udw"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="camera" id="M8K-R3-ZXd">
+                                    <barButtonItem systemItem="camera" id="M8K-R3-ZXd">
                                         <connections>
                                             <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="KIq-kr-21O"/>
                                         </connections>
@@ -44,15 +44,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fs1-22-LP5">
-                                <rect key="frame" x="20" y="44" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fs1-22-LP5">
+                                <rect key="frame" x="20" y="74" width="560" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xi5-5d-4pk">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Y0t-c1-5rf"/>
+                                    <constraint firstAttribute="height" constant="64" id="Y0t-c1-5rf">
+                                        <variation key="heightClass=compact" constant="44"/>
+                                    </constraint>
                                 </constraints>
                                 <items>
                                     <navigationItem id="zSJ-dV-zcV">
@@ -86,6 +88,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="Fs1-22-LP5" secondAttribute="leading" id="dHW-7X-dbg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Xi5-5d-4pk" secondAttribute="trailing" id="g9q-mJ-s8y"/>
                             <constraint firstItem="MsG-eQ-2gh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hcP-cW-Rj2"/>
+                            <constraint firstItem="Fs1-22-LP5" firstAttribute="top" secondItem="Xi5-5d-4pk" secondAttribute="bottom" constant="10" id="hds-Fc-PB6"/>
                             <constraint firstItem="D9h-k4-py0" firstAttribute="top" secondItem="MsG-eQ-2gh" secondAttribute="bottom" constant="242" id="k00-Je-xBB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Fs1-22-LP5" secondAttribute="trailing" id="lBz-Ci-O6y"/>
                             <constraint firstItem="Xi5-5d-4pk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="rIx-ZH-1pg"/>
@@ -96,6 +99,7 @@
                             <mask key="constraints">
                                 <exclude reference="Ih6-H7-Wrc"/>
                                 <exclude reference="g9q-mJ-s8y"/>
+                                <exclude reference="Ox5-Wk-UjM"/>
                                 <exclude reference="Pef-xD-s2j"/>
                                 <exclude reference="hcP-cW-Rj2"/>
                                 <exclude reference="k00-Je-xBB"/>

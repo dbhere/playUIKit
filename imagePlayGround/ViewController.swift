@@ -56,7 +56,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSStrokeColorAttributeName : UIColor.blackColor(),
         NSForegroundColorAttributeName : UIColor.whiteColor(),
         NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSStrokeWidthAttributeName : 5.0
+        NSStrokeWidthAttributeName : -3.0
     ]
     
     //当键盘出现时view整体向上移动

@@ -120,6 +120,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.presentViewController(imagePickerController, animated: true, completion: nil)
     }
     
+    @IBAction func shareMeme(sender: AnyObject) {
+        //制作memeImage
+        let memeImage = generateMemedImage()
+        //activity vc
+        let actVC = UIActivityViewController(activityItems: [memeImage], applicationActivities: nil)
+        presentViewController(actVC, animated: true, completion:nil)
+        //分享完成后保存memeObject
+        actVC.completionWithItemsHandler = {(type:String?, ok:Bool, object:[AnyObject]?,error:NSError?) -> Void in
+            if ok {
+                self.save()
+            }
+        }
+    }
+    
+    
     //imagePickerControllorDelegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {

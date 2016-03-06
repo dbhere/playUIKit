@@ -56,7 +56,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem id="zSJ-dV-zcV">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="0la-gx-W3a"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="0la-gx-W3a">
+                                            <connections>
+                                                <action selector="shareMeme:" destination="BYZ-38-t0r" id="Abi-Kv-KzS"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

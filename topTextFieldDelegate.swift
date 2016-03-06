@@ -11,6 +11,9 @@ import UIKit
 
 class topTextFieldDelegate: NSObject, UITextFieldDelegate{
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField.text == ""{
+            textField.text = "TOP"
+        }
         textField.resignFirstResponder()
         return true
     }

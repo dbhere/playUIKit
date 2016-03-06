@@ -11,6 +11,9 @@ import UIKit
 
 class  bottomTextFieldDelegate:NSObject, UITextFieldDelegate{
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField.text == ""{
+            textField.text = "BOTTOM"
+        }
         textField.resignFirstResponder()
         return true
     }
@@ -20,5 +23,4 @@ class  bottomTextFieldDelegate:NSObject, UITextFieldDelegate{
         }
         return true
     }
-
 }

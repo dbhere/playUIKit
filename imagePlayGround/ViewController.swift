@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var toolBar: UIToolbar!
+    
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
@@ -85,7 +88,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     //创建Meme图像
     func generateMemedImage() -> UIImage
     {
-        // TODO: Hide toolbar and navbar
+        //Hide toolbar and navbar
+        navBar.hidden = true
+        toolBar.hidden = true
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -95,7 +100,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        // TODO:  Show toolbar and navbar
+        //Show toolbar and navbar
+        navBar.hidden = false
+        toolBar.hidden = false
         
         return memedImage
     }

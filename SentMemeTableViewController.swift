@@ -9,7 +9,10 @@
 import UIKit
 
 class SentMemeTableViewController:UITableViewController{
-    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
     
     
     let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -24,6 +27,13 @@ class SentMemeTableViewController:UITableViewController{
         cell.imageView?.image = meme.image
         cell.textLabel?.text = meme.topText! + meme.bottomText!
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let VC = self.storyboard!.instantiateViewControllerWithIdentifier("memeViewController") as! ViewController
+        let meme = delegate.memes[indexPath.row]
+        VC.oldMeme = meme
+        presentViewController(VC, animated: true, completion: nil)
     }
     
     @IBAction func createAnMeme(sender: AnyObject) {

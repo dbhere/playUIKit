@@ -23,6 +23,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     let topDelegate = topTextFieldDelegate()
     let bottomDelegate = bottomTextFieldDelegate()
+    var oldMeme:Meme?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if let meme = oldMeme{
+            self.topTextField.text = meme.topText
+            self.bottomTextField.text = meme.bottomText
+            self.imagePickerView.image = meme.image
+        }
+        
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         subscribeToKeyboardNotifications()
         
@@ -143,10 +151,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         actVC.completionWithItemsHandler = {(type:String?, ok:Bool, object:[AnyObject]?,error:NSError?) -> Void in
             if ok {
                 self.save()
+                self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
     }
     
+    @IBAction func cancelMeme(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     //imagePickerControllorDelegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {

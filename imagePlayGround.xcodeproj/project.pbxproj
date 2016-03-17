@@ -17,6 +17,7 @@
 		350467401C85E87A00115A08 /* imagePlayGroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3504673F1C85E87A00115A08 /* imagePlayGroundUITests.swift */; };
 		356C8BFD1C86CCC70017B63B /* topTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356C8BFC1C86CCC70017B63B /* topTextFieldDelegate.swift */; };
 		356C8BFF1C86CDA40017B63B /* bottomTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356C8BFE1C86CDA40017B63B /* bottomTextFieldDelegate.swift */; };
+		358442651C9AFEEF00E8A6EA /* SentMemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358442641C9AFEEF00E8A6EA /* SentMemeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		350467411C85E87A00115A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		356C8BFC1C86CCC70017B63B /* topTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = topTextFieldDelegate.swift; sourceTree = "<group>"; };
 		356C8BFE1C86CDA40017B63B /* bottomTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = bottomTextFieldDelegate.swift; path = imagePlayGround/bottomTextFieldDelegate.swift; sourceTree = "<group>"; };
+		358442641C9AFEEF00E8A6EA /* SentMemeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMemeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		350467131C85E87900115A08 = {
 			isa = PBXGroup;
 			children = (
+				358442641C9AFEEF00E8A6EA /* SentMemeTableViewController.swift */,
 				356C8C021C86CF7C0017B63B /* delegate */,
 				3504671E1C85E87900115A08 /* imagePlayGround */,
 				350467331C85E87900115A08 /* imagePlayGroundTests */,
@@ -281,6 +284,7 @@
 				350467201C85E87900115A08 /* AppDelegate.swift in Sources */,
 				356C8BFD1C86CCC70017B63B /* topTextFieldDelegate.swift in Sources */,
 				35032B331C86EF4400C5889D /* Meme.swift in Sources */,
+				358442651C9AFEEF00E8A6EA /* SentMemeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

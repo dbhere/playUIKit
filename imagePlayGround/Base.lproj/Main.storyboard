@@ -17,6 +17,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="nPg-KM-paS" kind="relationship" relationship="viewControllers" id="9Er-e6-V2U"/>
+                        <segue destination="sCB-ms-vE8" kind="relationship" relationship="viewControllers" id="RTA-sU-iwY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHF-0B-RYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -39,6 +40,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="liR-Le-zjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-229" y="-757"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Rda-Sg-kRa">
+            <objects>
+                <collectionViewController id="sCB-ms-vE8" customClass="sentMemeCollectionViewController" customModule="imagePlayGround" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="YwK-6N-5Fm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.99872044605606358" blue="0.99261039125630068" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VTK-KA-bkf">
+                            <size key="itemSize" width="219" height="188"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="memeCollectionCell" id="Fuf-VH-9sS" customClass="MemeCollectionViewCell" customModule="imagePlayGround" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="219" height="188"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="219" height="188"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FQm-ZY-kFR">
+                                            <rect key="frame" x="34.5" y="19" width="150" height="150"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="150" id="5yh-sY-pWR"/>
+                                                <constraint firstAttribute="width" constant="150" id="eZa-ga-0be"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="whQ-Uu-PKB"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="FQm-ZY-kFR" firstAttribute="centerX" secondItem="Fuf-VH-9sS" secondAttribute="centerX" id="LHQ-Cd-kMN"/>
+                                    <constraint firstItem="FQm-ZY-kFR" firstAttribute="centerY" secondItem="Fuf-VH-9sS" secondAttribute="centerY" id="jQo-Fx-1fZ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="memeImageView" destination="FQm-ZY-kFR" id="ktY-Cm-ez4"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="sCB-ms-vE8" id="diL-HU-XhF"/>
+                            <outlet property="delegate" destination="sCB-ms-vE8" id="jhg-Vo-jqZ"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Item" id="voF-03-Siy"/>
+                    <connections>
+                        <outlet property="collectionLayout" destination="VTK-KA-bkf" id="Mzd-bb-a48"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gAn-iS-n20" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-180" y="221"/>
         </scene>
         <!--Title-->
         <scene sceneID="QRq-6N-Pp0">
@@ -192,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="366" y="-5"/>
+            <point key="canvasLocation" x="1489" y="-772"/>
         </scene>
     </scenes>
 </document>

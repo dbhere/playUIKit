@@ -17,18 +17,18 @@
                     </tabBar>
                     <connections>
                         <segue destination="nPg-KM-paS" kind="relationship" relationship="viewControllers" id="9Er-e6-V2U"/>
-                        <segue destination="sCB-ms-vE8" kind="relationship" relationship="viewControllers" id="RTA-sU-iwY"/>
+                        <segue destination="FYx-vU-QbX" kind="relationship" relationship="viewControllers" id="u8n-5e-Ceo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHF-0B-RYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1049" y="-574"/>
+            <point key="canvasLocation" x="-993" y="-564"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="d7T-FW-dwi">
             <objects>
                 <navigationController id="nPg-KM-paS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5Vj-rb-Cm4"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="5Vj-rb-Cm4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="n2I-qD-nR8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -42,6 +42,23 @@
             <point key="canvasLocation" x="-229" y="-757"/>
         </scene>
         <!--Item-->
+        <scene sceneID="oFy-Ev-Jgd">
+            <objects>
+                <navigationController id="FYx-vU-QbX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="OTn-mA-W2h"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6xN-9t-Cew">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sCB-ms-vE8" kind="relationship" relationship="rootViewController" id="AVj-Bz-dbS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n03-ag-Qbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-229" y="171"/>
+        </scene>
+        <!--Sent Memes-->
         <scene sceneID="Rda-Sg-kRa">
             <objects>
                 <collectionViewController automaticallyAdjustsScrollViewInsets="NO" clearsSelectionOnViewWillAppear="NO" id="sCB-ms-vE8" customClass="sentMemeCollectionViewController" customModule="imagePlayGround" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,14 +115,21 @@
                             <outlet property="delegate" destination="sCB-ms-vE8" id="jhg-Vo-jqZ"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="voF-03-Siy"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="voF-03-Siy"/>
+                    <navigationItem key="navigationItem" title="Sent Memes" id="dVb-fs-pGN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="r2N-e9-g3O">
+                            <connections>
+                                <action selector="addNewMeme:" destination="sCB-ms-vE8" id="PQq-w2-fCQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionLayout" destination="VTK-KA-bkf" id="Mzd-bb-a48"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAn-iS-n20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-169" y="246"/>
+            <point key="canvasLocation" x="554" y="171"/>
         </scene>
         <!--Sent Memes-->
         <scene sceneID="QRq-6N-Pp0">

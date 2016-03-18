@@ -16,7 +16,7 @@ class sentMemeCollectionViewController:UICollectionViewController {
         let space:CGFloat = 3.0
         let linespace:CGFloat = 10.0
         let demention = CGFloat(100)
-        collectionView?.contentInset = UIEdgeInsets(top: 23, left: 5, bottom: 10, right: 5)
+        collectionView?.contentInset = UIEdgeInsets(top: UIApplication.sharedApplication().statusBarFrame.size.height + self.navigationController!.navigationBar.frame.size.height , left: 5, bottom: 10, right: 5)
         collectionLayout.minimumLineSpacing = linespace
         collectionLayout.minimumInteritemSpacing = space
         collectionLayout.itemSize = CGSize(width: demention, height: demention)
@@ -24,11 +24,17 @@ class sentMemeCollectionViewController:UICollectionViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        collectionView?.contentInset = UIEdgeInsets(top: UIApplication.sharedApplication().statusBarFrame.size.height + self.navigationController!.navigationBar.frame.size.height , left: 5, bottom: 10, right: 5)
         collectionView?.reloadData()
     }
     
     let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
+    @IBAction func addNewMeme(sender: AnyObject) {
+        let VC = self.storyboard!.instantiateViewControllerWithIdentifier("memeViewController") as! ViewController
+        presentViewController(VC, animated: true, completion: nil)
+
+    }
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return delegate.memes.count
     }

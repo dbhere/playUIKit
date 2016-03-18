@@ -14,13 +14,10 @@ class sentMemeCollectionViewController:UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let space:CGFloat = 3.0
-        var demention:CGFloat = (self.view.frame.height - 2 * space) / 3.0
-        
-        if UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation){
-            demention = (self.view.frame.width - 4 * space) / 5.0
-        }
-        
-        collectionLayout.minimumLineSpacing = space
+        let linespace:CGFloat = 10.0
+        let demention = CGFloat(100)
+        collectionView?.contentInset = UIEdgeInsets(top: 23, left: 5, bottom: 10, right: 5)
+        collectionLayout.minimumLineSpacing = linespace
         collectionLayout.minimumInteritemSpacing = space
         collectionLayout.itemSize = CGSize(width: demention, height: demention)
     }

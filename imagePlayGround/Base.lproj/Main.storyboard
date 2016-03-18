@@ -44,7 +44,7 @@
         <!--Item-->
         <scene sceneID="Rda-Sg-kRa">
             <objects>
-                <collectionViewController id="sCB-ms-vE8" customClass="sentMemeCollectionViewController" customModule="imagePlayGround" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController automaticallyAdjustsScrollViewInsets="NO" clearsSelectionOnViewWillAppear="NO" id="sCB-ms-vE8" customClass="sentMemeCollectionViewController" customModule="imagePlayGround" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="YwK-6N-5Fm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,17 +63,27 @@
                                     <rect key="frame" x="0.0" y="0.0" width="219" height="188"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FQm-ZY-kFR">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FQm-ZY-kFR">
                                             <rect key="frame" x="34.5" y="19" width="150" height="150"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="150" id="5yh-sY-pWR"/>
+                                                <constraint firstAttribute="height" constant="150" id="Qgg-aO-Xgm"/>
                                                 <constraint firstAttribute="width" constant="150" id="eZa-ga-0be"/>
+                                                <constraint firstAttribute="width" constant="150" id="lTE-1L-s8t"/>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="whQ-Uu-PKB"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="5yh-sY-pWR"/>
+                                                    <exclude reference="eZa-ga-0be"/>
+                                                    <exclude reference="whQ-Uu-PKB"/>
+                                                </mask>
+                                            </variation>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="FQm-ZY-kFR" firstAttribute="centerX" secondItem="Fuf-VH-9sS" secondAttribute="centerX" id="LHQ-Cd-kMN"/>
                                     <constraint firstItem="FQm-ZY-kFR" firstAttribute="centerY" secondItem="Fuf-VH-9sS" secondAttribute="centerY" id="jQo-Fx-1fZ"/>
@@ -95,7 +105,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAn-iS-n20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180" y="221"/>
+            <point key="canvasLocation" x="-169" y="246"/>
         </scene>
         <!--Title-->
         <scene sceneID="QRq-6N-Pp0">

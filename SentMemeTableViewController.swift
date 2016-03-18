@@ -9,6 +9,12 @@
 import UIKit
 
 class SentMemeTableViewController:UITableViewController{
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
@@ -16,6 +22,13 @@ class SentMemeTableViewController:UITableViewController{
     
     
     let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete{
+            delegate.memes.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return delegate.memes.count

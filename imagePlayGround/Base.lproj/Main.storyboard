@@ -107,7 +107,7 @@
             </objects>
             <point key="canvasLocation" x="-169" y="246"/>
         </scene>
-        <!--Title-->
+        <!--Sent Memes-->
         <scene sceneID="QRq-6N-Pp0">
             <objects>
                 <tableViewController id="9we-5V-Y54" customClass="SentMemeTableViewController" customModule="imagePlayGround" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,7 +130,7 @@
                             <outlet property="delegate" destination="9we-5V-Y54" id="e0U-Sr-maC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="pE2-hN-8N6">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="pE2-hN-8N6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bQ9-e5-aHF">
                             <connections>
                                 <action selector="createAnMeme:" destination="9we-5V-Y54" id="EdX-Dy-ldp"/>

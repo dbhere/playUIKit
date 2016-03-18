@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIGestureRecognizerDelegate {
 
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
@@ -36,7 +36,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topTextField.textAlignment = NSTextAlignment.Center
         bottomTextField.textAlignment = NSTextAlignment.Center
         shareButton.enabled = false
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: "hideNavBarOntap")
+        tapGesture.delegate = self
+        self.view.addGestureRecognizer(tapGesture)
     }
+    
+    func hideNavBarOntap() {
+        if(self.navBar.hidden == false) {
+            self.navBar.hidden = true
+            self.toolBar.hidden = true
+            // hide nav bar is not hidden
+        } else{
+            self.navBar.hidden = false
+            self.toolBar.hidden = false
+        }
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         

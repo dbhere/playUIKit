@@ -120,8 +120,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         navBar.hidden = true
         toolBar.hidden = true
         
+        //使图像适应不同的retina屏幕
+        if UIScreen.mainScreen().respondsToSelector("scale"){
+            UIGraphicsBeginImageContextWithOptions(view.frame.size,false,UIScreen.mainScreen().scale);
+        }
+        else {
+            UIGraphicsBeginImageContext(view.frame.size);
+        }
+        
         // Render view to an image
-        UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawViewHierarchyInRect(self.view.frame,
             afterScreenUpdates: true)
         let memedImage : UIImage =

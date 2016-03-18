@@ -63,7 +63,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="219" height="188"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FQm-ZY-kFR">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FQm-ZY-kFR">
                                             <rect key="frame" x="34.5" y="19" width="150" height="150"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="150" id="5yh-sY-pWR"/>
@@ -111,18 +111,50 @@
         <scene sceneID="QRq-6N-Pp0">
             <objects>
                 <tableViewController id="9we-5V-Y54" customClass="SentMemeTableViewController" customModule="imagePlayGround" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OM1-Ld-Mrf">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" id="OM1-Ld-Mrf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeCell" id="U5W-5N-dQc">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeCell" rowHeight="101" id="U5W-5N-dQc" customClass="MemeTableViewCell" customModule="imagePlayGround" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="101"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U5W-5N-dQc" id="MIu-sk-9Kf">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="100.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iiC-uP-AJm">
+                                            <rect key="frame" x="8" y="10" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="8SY-Ib-lpo"/>
+                                                <constraint firstAttribute="width" constant="80" id="Sbm-p1-FOV"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBN-F0-pue">
+                                            <rect key="frame" x="116" y="40.5" width="474" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fBN-F0-pue" firstAttribute="leading" secondItem="iiC-uP-AJm" secondAttribute="trailing" constant="30" id="Fyd-uM-0ZM"/>
+                                        <constraint firstItem="iiC-uP-AJm" firstAttribute="centerY" secondItem="MIu-sk-9Kf" secondAttribute="centerY" id="GgI-dY-zxM"/>
+                                        <constraint firstItem="fBN-F0-pue" firstAttribute="centerY" secondItem="MIu-sk-9Kf" secondAttribute="centerY" id="PgX-E7-48b"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="iiC-uP-AJm" secondAttribute="bottom" constant="67.5" id="RhI-RM-35R"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="fBN-F0-pue" secondAttribute="trailing" id="gRf-0d-M5h"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="iiC-uP-AJm" secondAttribute="leading" id="hAD-v1-Fbj"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="RhI-RM-35R"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="memeText" destination="fBN-F0-pue" id="WgD-IB-vA4"/>
+                                    <outlet property="memedImage" destination="iiC-uP-AJm" id="0uD-8Z-a4w"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

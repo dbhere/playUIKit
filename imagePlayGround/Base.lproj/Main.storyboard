@@ -219,16 +219,19 @@
                                     <constraint firstAttribute="height" constant="44" id="ptu-1b-nFa"/>
                                 </constraints>
                                 <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="3yO-zf-LHw"/>
                                     <barButtonItem title="Pick" id="JAQ-Xx-5M2">
                                         <connections>
                                             <action selector="pickImage:" destination="BYZ-38-t0r" id="z41-qH-udw"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem width="50" style="plain" systemItem="fixedSpace" id="8go-G6-oxr"/>
                                     <barButtonItem systemItem="camera" id="M8K-R3-ZXd">
                                         <connections>
                                             <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="KIq-kr-21O"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hSZ-qd-T6X"/>
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uzv-QP-13W">
